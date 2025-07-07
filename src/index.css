@@ -1,0 +1,149 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 258 45% 7%;
+    --foreground: 280 20% 98%;
+
+    --card: 258 45% 9%;
+    --card-foreground: 280 20% 98%;
+
+    --popover: 258 45% 9%;
+    --popover-foreground: 280 20% 98%;
+
+    --primary: 270 100% 70%;
+    --primary-foreground: 280 20% 98%;
+
+    --secondary: 260 32% 17%;
+    --secondary-foreground: 280 20% 98%;
+
+    --muted: 260 32% 17%;
+    --muted-foreground: 270 15% 65%;
+
+    --accent: 270 100% 70%;
+    --accent-foreground: 280 20% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 280 20% 98%;
+
+    --border: 260 32% 17%;
+    --input: 260 32% 17%;
+    --ring: 270 100% 70%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 258 45% 7%;
+    --sidebar-foreground: 280 20% 98%;
+    --sidebar-primary: 270 100% 70%;
+    --sidebar-primary-foreground: 280 20% 98%;
+    --sidebar-accent: 260 32% 17%;
+    --sidebar-accent-foreground: 280 20% 98%;
+    --sidebar-border: 260 32% 17%;
+    --sidebar-ring: 270 100% 70%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+    background: linear-gradient(135deg, hsl(258 45% 7%) 0%, hsl(268 55% 15%) 50%, hsl(280 65% 25%) 100%);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins;
+  }
+
+  p, span, div {
+    @apply font-poppins;
+  }
+
+  button {
+    @apply font-poppins;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    @apply bg-gradient-to-r from-purple-300 via-violet-200 to-indigo-200 bg-clip-text text-transparent;
+  }
+  
+  .gradient-text-alt {
+    @apply bg-gradient-to-r from-orange-400 via-yellow-400 to-orange-300 bg-clip-text text-transparent;
+  }
+  
+  .glass-card {
+    @apply bg-gradient-to-br from-purple-900/30 via-violet-800/20 to-indigo-700/20 backdrop-blur-sm border border-purple-500/30 rounded-xl;
+  }
+  
+  .glass-card-alt {
+    @apply bg-gradient-to-br from-indigo-700/20 via-violet-800/10 to-purple-900/20 backdrop-blur-sm border border-purple-400/30 rounded-xl;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-purple-500/20;
+  }
+
+  .btn-primary {
+    @apply bg-gradient-to-r from-purple-600 via-violet-500 to-indigo-500 hover:from-purple-700 hover:via-violet-600 hover:to-indigo-600 text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg shadow-purple-500/25;
+  }
+
+  .btn-secondary {
+    @apply bg-gradient-to-r from-orange-500 via-yellow-500 to-orange-400 hover:from-orange-600 hover:via-yellow-600 hover:to-orange-500 text-white font-semibold transition-all duration-300 transform hover:scale-105 shadow-lg shadow-orange-400/25;
+  }
+
+  /* Profile image styling - now fills the entire circle */
+  .profile-img {
+    border-radius: 50%;
+    border: 4px solid #FACA15;
+    margin-bottom: 16px;
+    object-fit: cover;
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+    box-shadow: 0 20px 40px rgba(147, 51, 234, 0.3);
+  }
+
+  /* Desktop sizing - larger to fill the original container space */
+  @media (min-width: 768px) {
+    .profile-img {
+      width: 384px;
+      height: 384px;
+    }
+  }
+
+  /* Mobile sizing - proportionally scaled down */
+  @media (max-width: 767px) {
+    .profile-img {
+      width: 320px;
+      height: 320px;
+    }
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(258 45% 9%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, hsl(270 100% 70%), hsl(270 90% 65%), hsl(270 80% 60%));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, hsl(270 100% 60%), hsl(270 90% 55%), hsl(270 80% 50%));
+}
