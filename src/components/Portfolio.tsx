@@ -6,35 +6,35 @@ const Portfolio = () => {
       title: 'Yaadein',
       subtitle: 'A Love Story',
       image: '/thumbnails/yaadein.jpg',
-      fallback: '/lovable-uploads/32aeccba-021d-4a28-b9c3-7ae3b0d0d3c3.png',
+      fallback: '/Uploads/Yaadein.png',
       link: 'https://www.instagram.com/reel/DGdYuLsvaLN/?igsh=N24ybW5zbnprYmtu'
     },
     {
       title: 'Vishwasghaat',
       subtitle: 'A Psychopath\'s Story',
       image: '/thumbnails/vishwashghaat.jpg',
-      fallback: '/lovable-uploads/f6273a46-52b2-4b45-8bf5-2cfe52c48090.png',
+      fallback: '/Uploads/Vishwasghaat.png',
       link: 'https://www.instagram.com/reel/DGTbuZSzxIr/?igsh=MTdtdnVyZWo1MGk3eA=='
     },
     {
       title: 'Bully Part-1',
       subtitle: 'Horror',
       image: '/thumbnails/bully-part-1.jpg',
-      fallback: '/lovable-uploads/c10779f6-68e3-46e3-bc67-dc16a2965d03.png',
+      fallback: '/Uploads/Bully Part-1.png',
       link: 'https://www.instagram.com/reel/DIbnUKdzw-B/?igsh=bnU2NXJndWN5N3pp'
     },
     {
       title: 'Bully Part-2',
       subtitle: 'Horror',
       image: '/thumbnails/bully-part-2.jpg',
-      fallback: '/lovable-uploads/0de1396d-e6dd-4cec-9575-9fbbe8b917a3.png',
+      fallback: '/Uploads/Bully Part-2.png',
       link: 'https://www.instagram.com/reel/DIbnUKdzw-B/?igsh=bnU2NXJndWN5N3pp'
     },
     {
       title: 'Promotional Reel',
       subtitle: 'For a factory.',
       image: '/thumbnails/promotional-reel.jpg',
-      fallback: '/lovable-uploads/89078601-82be-41bc-bcd0-23bf45fe2510.png',
+      fallback: '/Uploads/Promotional Reel.png',
       link: 'https://www.instagram.com/reel/DH311uLTnNS/?igsh=MXB0ZDk4aHFicGcwMQ=='
     }
   ];

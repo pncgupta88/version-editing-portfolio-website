@@ -4,12 +4,12 @@ const Footer = () => {
     <footer className="py-3 border-t border-purple-500/20">
       <div className="container mx-auto px-4">
         <div className="text-center">
-          <div className="text-2xl font-bold gradient-text font-poppins mb-3">
+          {/* <div className="text-2xl font-bold gradient-text font-poppins mb-3">
             Prince Kumar Gupta
-          </div>
+          </div> */}
 
           <p className="text-foreground/60 mb-2">
-            Professional Video Editor • Cinematic Storyteller
+            Video Editor • Cinematic Storyteller
           </p>
 
           <div className="flex justify-center gap-4 mb-2">

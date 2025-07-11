@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="relative flex justify-center lg:justify-start order-2 lg:order-1">
           <div className="relative">
             {/* Simplified profile image structure */}
-            <img src="/lovable-uploads/0175a4c6-3996-46eb-910a-d59663081331.png" alt="Prince Kumar Gupta profile picture" width="405" height="433" className="profile-img" fetchPriority='high'/>
+            <img src="/Uploads/Profile Pic.png" alt="Prince Kumar Gupta profile picture" width="405" height="433" className="profile-img" fetchPriority='high'/>
           </div>
         </div>
 
