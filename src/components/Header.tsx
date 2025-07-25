@@ -78,7 +78,7 @@ const Header = () => {
 
         {/* Mobile Navigation Dropdown */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden mt-4 py-4 px-4 border-t border-purple-500/20 bg-background/90 backdrop-blur-md fixed top-[63.5px] left-0 right-0 z-40">
+          <nav className="md:hidden mt-4 py-4 px-4 border-t border-purple-500/20 bg-background/90 backdrop-blur-md fixed top-[63.5px] left-50 right-0 z-40">
             <div className="flex flex-col space-y-4 items-end">
               {navItems.map(item => (
                 <button
