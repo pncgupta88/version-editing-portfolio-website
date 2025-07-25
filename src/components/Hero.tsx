@@ -61,12 +61,12 @@ const Hero = () => {
 
           {/* Stats */}
           <div className="flex flex-col sm:flex-row justify-center lg:justify-start gap-8 sm:gap-16">
-            <div className="text-center lg:text-left">
+            {/* <div className="text-center lg:text-left">
               <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 font-poppins">6+</div>
               <div className="text-white/60 font-poppins">Months Experience</div>
-            </div>
+            </div> */}
             <div className="text-center lg:text-left">
-              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 font-poppins">20+</div>
+              <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-2 font-poppins">30+</div>
               <div className="text-white/60 font-poppins">Projects Completed</div>
             </div>
             <div className="text-center lg:text-left">

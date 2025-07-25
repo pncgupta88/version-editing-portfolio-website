@@ -1,0 +1,9 @@
+[dev]
+  command = "npm run dev"
+  targetPort = 8080
+
+# Yeh Netlify ko batata hai ki /api/ se aane wali sabhi requests ko functions par bhejna hai
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
