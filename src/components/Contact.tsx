@@ -1,5 +1,6 @@
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+// import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -13,6 +14,15 @@ const Contact = () => {
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const [emailUrl, setEmailUrl] = useState('mailto:versioneditingstudio@gmail.com');
+
+  useEffect(() => {
+    const isMobile = /Mobi|Android|iPhone/i.test(navigator.userAgent);
+    if (!isMobile) {
+      setEmailUrl('https://mail.google.com/mail/?view=cm&fs=1&to=versioneditingstudio@gmail.com');
+    }
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,7 +44,7 @@ const Contact = () => {
         title: "Message Sent!",
         description: "Thank you for your message. I'll get back to you soon!",
       });
-      
+
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
       console.error('EmailJS Error:', error);
@@ -65,7 +75,7 @@ const Contact = () => {
     },
     {
       name: 'Email',
-      url: 'mailto:versioneditingstudio@gmail.com',
+      url: emailUrl,
       icon: '📧',
       handle: 'versioneditingstudio@gmail.com',
       gradient: 'from-purple-500/10 to-pink-500/20'
@@ -91,7 +101,7 @@ const Contact = () => {
               <h3 className="text-2xl font-bold font-poppins gradient-text-alt mb-6">
                 Send Me a Message
               </h3>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-foreground/80 mb-2">
@@ -109,7 +119,7 @@ const Contact = () => {
                     placeholder="Your Full Name"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-foreground/80 mb-2">
                     Email *
@@ -126,7 +136,7 @@ const Contact = () => {
                     placeholder="Your E-mail Address"
                   />
                 </div>
-                
+
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-foreground/80 mb-2">
                     Message *
@@ -143,7 +153,7 @@ const Contact = () => {
                     placeholder="Tell me about your project, timeline, and vision."
                   />
                 </div>
-                
+
                 <Button
                   type="submit"
                   disabled={isSubmitting}
@@ -161,10 +171,10 @@ const Contact = () => {
                 <h3 className="text-2xl font-bold font-poppins gradient-text mb-6">
                   Get In Touch
                 </h3>
-                
+
                 <p className="text-foreground/70 mb-8 leading-relaxed">
-                  I'm always excited to work on new projects and collaborate with creative minds. 
-                  Whether you need a quick reel edit or a complete short film post-production, 
+                  I'm always excited to work on new projects and collaborate with creative minds.
+                  Whether you need a quick reel edit or a complete short film post-production,
                   let's make something incredible together.
                 </p>
 
